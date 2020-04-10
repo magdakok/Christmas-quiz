@@ -1,0 +1,17 @@
+@mixin stripped {
+    background-image: repeating-linear-gradient(
+        45deg, 
+        rgba($color-tertiary-dark,1), 
+        rgba($color-tertiary-dark,1) 7px, 
+        rgba($color-secondary,1) 0, 
+        rgba($color-secondary,1) 14px);
+}
+
+@mixin stripped-text {
+    @include stripped;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 400;
+    -webkit-background-clip: text;
+    color: transparent;
+}

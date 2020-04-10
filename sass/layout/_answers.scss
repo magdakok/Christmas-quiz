@@ -1,0 +1,100 @@
+.answers {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 10rem);
+    column-gap: 5rem;
+    row-gap: 2rem;
+
+    padding: 1rem 5rem;
+    font-size: 1.8rem;
+
+    @media only screen and (max-width: 70em) {
+        grid-column: 1 / -1;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+        column-gap: 3rem;
+        padding: 1rem 3rem;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content;
+        padding: 0 4rem;
+    }
+
+    .answer {
+        background-color: rgba(#ffffff, 0.5);
+        display: flex;
+        position: relative;
+
+        justify-content: center;
+        align-items: center;
+
+        width: 27rem;
+        padding: 2rem;
+        border-radius: 3px;
+
+        text-align: center;
+
+        cursor: pointer;
+        transition: all 0.3s;
+        
+
+        @media only screen and (max-width: 37.5em) {
+            padding: 2rem 2rem 2rem 4rem;
+            width: 100%;
+        }
+        
+        @media only screen and (min-width: 70em) {
+            &:hover,
+            &:focus {
+                transform: scale(0.95);
+                &::after {
+                    @include stripped-text;
+                    opacity: 1;
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        &:active {
+           &::after {
+            opacity: 1;
+            transform: scale(1.1);
+           };
+        }
+
+        &::after {
+            position: absolute;
+            line-height: 1.5;
+            width: 35%;
+            top: -29%;
+            left: -17%;
+            z-index: 1;
+            @include stripped-text;
+            opacity: 0.2;
+            font-family: 'Cinzel', serif;
+            font-weight: 900;
+            font-size: 7rem;
+            transition: all 0.4s;
+        }
+
+        &-1::after {
+            content: 'A';
+        }
+        &-2::after {
+            content: 'B';
+        }
+        &-3::after {
+            content: 'C';
+        }
+        &-4::after {
+            content: 'D';
+        }
+    }
+
+}

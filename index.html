@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;600&Lato:wght@400;700&family=Cinzel:wght@900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/main.css">
+        <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
+        
+        <title>Christmas Quiz</title>
+    </head>
+    <body>
+        <div class="popup" id="popup">Good answer!</div>
+        <div class="container">
+            
+            <div class="heading-box"><h1 class="heading">Christmas quiz</h1></div>
+            <div class="question" id="question"> How does Santa Claus go back up the Chimney to continue his journey of delivering gifts? </div>
+            
+            <div class="answers" id="answers">
+                <div class="answer answer-1" id="answer-1"> He asks reindeers for help</div>
+                <div class="answer answer-2" id="answer-2"> He levitates</div>
+                <div class="answer answer-3" id="answer-3"> He calls fire-fighters</div>
+                <div class="answer answer-4" id="answer-4"> He jumps up through the chimney (trampoline he has always with him)</div>
+            </div>
+            
+            <div class="side-panel">
+                <div class="last-question" id="last-question">
+                    <span id="last-question" id="last-question">What is the second line of “I’m dreaming of a white Christmas”?</span> 
+                    <div class="your-answer">Your answer: <span id="your-answer">Blah greta thunberg</span></div>
+                    <div class="correct-answer">Correct answer: <span id='correct-answer'>Blah greta thunberg<</span></div>
+                </div>
+                
+                <div class="counter">
+                    <div class="correct">Correct: <span id="correct-count">7</span></div>
+                    <div class="wrong">Wrong: <span id="wrong-count">3</span></div>
+                </div>
+                <button class="btn-replay" id="btn-replay"></button>
+            </div>
+        </div>
+
+        
+    </body>
+    <script src="script.js"></script>
+</html>

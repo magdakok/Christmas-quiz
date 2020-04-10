@@ -1,0 +1,25 @@
+body {
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-black;
+}
+
+.heading {
+    @include stripped-text;
+    font-family: 'Cinzel', serif;
+    font-size: 6rem;
+    text-align: center;
+    
+    @media only screen and (max-width: 56.25em) {
+        font-size: 4rem;
+        line-height: 1.1;
+    }
+}
+
+.last-question {
+    font-size: 1.4rem;
+}
+
+.counter {font-size: 1.8rem; font-weight: 600;}

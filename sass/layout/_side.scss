@@ -1,0 +1,47 @@
+.side-panel {
+    text-align: center;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    align-self: end;
+    
+    transition: all 0.5;
+
+    @media only screen and (max-width: 70em) {
+        grid-column: 1 / -1;
+        grid-row: auto;
+
+        display: grid;
+        grid-template-rows: repeat(3,min-content);
+    }
+
+.counter {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    padding: 2rem;
+
+    @media only screen and (max-width: 70em) {
+        grid-row: 1 / 2;
+    }
+}
+
+    .last-question {
+        outline: 2px dotted rgba(#effbff, 0.4);
+        outline-offset: 2px;
+        background-color: rgba(#effbff, 0.4);
+        padding: 2rem;
+        transition: all 0.5;
+        
+        .your-answer {
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .correct-answer {
+            text-align: left;
+        }
+
+        @media only screen and (max-width: 37.5em) {
+            margin: 0 3rem;
+        }
+    }
+}

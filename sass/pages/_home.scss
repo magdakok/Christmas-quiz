@@ -1,0 +1,63 @@
+body {
+    background-image: linear-gradient(to bottom,
+    rgba($color-tertiary-light, $color-opacity),
+    rgba($color-tertiary-dark,$color-opacity)),
+    url(../../img/background-1x.jpg);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 37.5em) {
+    
+        background-image: 
+        linear-gradient(to bottom,
+        rgba($color-tertiary-light, $color-opacity),
+        rgba($color-tertiary-dark, $color-opacity)),
+        url(../../img/background-2x.jpg);
+    }
+}
+
+.container {
+    background-color: $color-white;
+    max-width: 112rem;
+    padding: 3rem;
+    border-radius: 3px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;  
+    gap: 3rem;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.5;
+    position: relative;
+
+    @media only screen and (max-width: 70em) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto, min-content);
+        margin: auto 10%;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    @media only screen and (max-width: 43.75em) {
+        padding: 2rem 1rem;
+        margin: 2% 5%;
+    }
+}
+
+.heading-box {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}

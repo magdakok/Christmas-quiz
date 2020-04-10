@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+
+    @media only screen and (max-width: 56.25em) {
+        font-size: 50%;
+        user-select: none;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+::selection {
+    background-color: rgba($color-secondary, 0.5);
+    color: $color-tertiary-dark;
+}
