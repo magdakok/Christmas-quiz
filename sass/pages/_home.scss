@@ -1,8 +1,5 @@
 body {
-    background-image: linear-gradient(to bottom,
-    rgba($color-tertiary-light, $color-opacity),
-    rgba($color-tertiary-dark,$color-opacity)),
-    url(../../img/background-1x.jpg);
+    background-image: url(../../img/background-1x.jpg);
 
     background-size: cover;
     background-position: center;
@@ -13,17 +10,35 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
+    ::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+
+    background-image: linear-gradient(to bottom,
+    rgba($color-tertiary-light, $color-opacity),
+    rgba($color-tertiary-dark,$color-opacity));
+    }
     
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
     (min-resolution: 192dpi) and (min-width: 37.5em),
     (min-width: 37.5em) {
     
-        background-image: 
-        linear-gradient(to bottom,
+        background-image: url(../../img/background-2x.jpg);
+
+        ::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+    
+        background-image: linear-gradient(to bottom,
         rgba($color-tertiary-light, $color-opacity),
-        rgba($color-tertiary-dark, $color-opacity)),
-        url(../../img/background-2x.jpg);
+        rgba($color-tertiary-dark,$color-opacity));
+        }
     }
 }
 
